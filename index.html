@@ -1,0 +1,23 @@
+<html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="Scripts/jquery-1.8.3.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#links a').click(function (e) {
+            e.preventDefault();
+            $("#myIframe").attr("src", $(this).attr('href'));
+        });
+    });
+</script>
+<body>
+    <div id="links">
+        <a href="http://microsoft.com">Microsoft</a> <a href="http://jquery.com">jQuery</a> <a href="#">TEST3</a>
+    </div>
+    <div id="parentDiv">
+        <iframe id="myIframe" src=""></iframe>
+    </div>
+    <div>
+    </div>
+</body>
+</html>
